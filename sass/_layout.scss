@@ -1,0 +1,9 @@
+.container {
+	display: grid;
+	grid-template-rows: 6rem 80vh repeat(5, min-content);
+	grid-template-columns: [full-start] minmax(min-content, 1fr) [center-start] repeat(
+			8,
+			[col-start] minmax(min-content, 1fr) [col-end]
+		) [center-end] minmax(min-content, 1fr) [full-end];
+}
+
