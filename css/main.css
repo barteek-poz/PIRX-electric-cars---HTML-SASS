@@ -672,16 +672,20 @@ body {
   .heading-secondary {
     font-size: 2.8rem;
   }
+  .heading-quaternary {
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
   .hero__buttons {
     display: none;
   }
   .about-us {
-    grid-template-columns: repeat(3, 60vw);
+    grid-template-columns: repeat(3, 80vw);
   }
   .about-us__content {
     grid-template-rows: repeat(3, -webkit-max-content);
     grid-template-rows: repeat(3, max-content);
-    grid-template-columns: 60vw;
+    grid-template-columns: 80vw;
   }
   .models__content {
     gap: 0rem;
