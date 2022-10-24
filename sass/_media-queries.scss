@@ -77,6 +77,8 @@
 		&__content {
 			grid-template-columns: 1fr;
 			grid-row: repeat (6, 1fr);
+			align-items: center;
+			justify-content: center;
 		}
 
 		&__info--1 {
@@ -122,10 +124,18 @@
 		grid-template-rows: 6rem 150vh repeat(5, min-content);
 	}
 
+.nav__items {
+	display: none;
+}
+
+.hamburger {
+	display: block;
+}
 
 	.heading-primary {
-		font-size: 3rem;
+		font-size: 3.2rem;
 	}
+
 	.hero__buttons {
 		margin-right: 10rem;
 	}
@@ -134,7 +144,7 @@
 		padding: 0;
 		column-gap: 5rem;
 		grid-template-rows: repeat(2, min-content);
-		grid-template-columns: repeat(3, 100vw);
+		grid-template-columns: repeat(3, 80vw);
 
 		&__content {
 			grid-template-rows: repeat(3, max-content);
@@ -145,6 +155,7 @@
 	.footer {
 		display: flex;
 		justify-content: center;
+		padding-bottom: 2rem;
 
 		&__container {
 			grid-template-columns: repeat(2, 30rem);
@@ -156,16 +167,16 @@
 
 		&__logo {
 			margin: 4rem 0;
-			justify-self: end;
+			justify-self: center;
 		}
 		&__about {
-			justify-self: end;
+			justify-self: center;
 		}
 		&__contact {
 			justify-self: start;
 		}
 		&__careers {
-			justify-self: end;
+			justify-self: center;
 		}
 
         &__about-text,
@@ -173,4 +184,45 @@
 		
 		line-height: 2;
 	}
+}}
+
+//500px 
+@media only screen and (max-width: 31.25em) {
+.heading-primary {
+	font-size: 3rem;
+	
+}
+
+.heading-secondary {
+font-size: 2.8rem;
+}
+
+.hero__buttons {
+	display: none;
+}
+
+	.about-us {
+		grid-template-columns: repeat(3, 60vw);
+
+		&__content {
+			grid-template-rows: repeat(3, max-content);
+			grid-template-columns: 60vw;
+		}
+	}
+
+	.models {
+		&__content {
+			gap:0rem;
+			grid-template-columns: 100%;
+			grid-row: repeat (6, 1fr);
+		}
+
+		&__stats {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__info {
+			margin-bottom: 4rem;
+		}
 }}
