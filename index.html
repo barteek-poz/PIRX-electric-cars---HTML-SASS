@@ -13,20 +13,21 @@
 </head>
 
 <body>
+    <nav class="nav">
+        <div class="nav__logo">PIRX</div>
+        <ul class="nav__items">
+            <li><a href="#about-us" class="nav__link">O nas</a></li>
+            <li><a href="#models" class="nav__link">Modele</a></li>
+            <li><a href="#gallery" class="nav__link">Galeria</a></li>
+            <li><a href="#shops" class="nav__link">Salony</a></li>
+            <li><a href="#footer" class="nav__link">Kontakt</a></li>
+        </ul>
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+    </nav>
     <div class="container">
-        <nav class="nav">
-            <div class="nav__logo">PIRX</div>
-            <ul class="nav__items">
-                <li><a href="#about-us" class="nav__link">O nas</a></li>
-                <li><a href="#models" class="nav__link">Modele</a></li>
-                <li><a href="#gallery" class="nav__link">Galeria</a></li>
-                <li><a href="#shops" class="nav__link">Salony</a></li>
-                <li><a href="#footer" class="nav__link">Kontakt</a></li>
-            </ul>
-            <button class="hamburger">
-                <div class="bar"></div>
-            </button>
-        </nav>
+
         <nav>
             <ul class="nav__mobile">
                 <li><a href="#about-us" class="nav__link nav__mobile-link">O nas</a></li>
@@ -44,18 +45,16 @@
         </section>
         <section class="hero__buttons">
             <button class="btn hero__buttons__btn--1">
-                <a href="#" class="btn__link">Poznaj nasze auta</a>
+                <a href="#models" class="btn__link">Poznaj nasze auta</a>
             </button>
-            <button class="btn hero__buttons__btn--2">
+            <button class="btn hero__buttons__btn--2 modal-signin__btn">
                 <a href="#" class="btn__link">Umów się na jazdę próbną</a>
             </button>
         </section>
 
         <section class="about-us" id="about-us">
             <div class="about-us__content">
-                <div class="about-us__logo"><svg>
-                        <use xlink:href="/svg/sprite.svg#icon-leaf"></use>
-                    </svg></div>
+                <div class="about-us__logo"><img src="/SVG/leaf.svg" alt="leaf-icon"></div>
                 <div class="about-us__heading">
                     <h3 class="heading-quaternary">Środowisko</h3>
                 </div>
@@ -66,9 +65,7 @@
             </div>
 
             <div class="about-us__content">
-                <div class="about-us__logo"><svg>
-                        <use xlink:href="/svg/sprite.svg#icon-wrench"></use>
-                    </svg></div>
+                <div class="about-us__logo"><img src="/SVG/wrench.svg" alt="wrench-icon"></div>
                 <div class="about-us__heading">
                     <h3 class="heading-quaternary">Jakość wykonania</h3>
                 </div>
@@ -79,9 +76,7 @@
             </div>
 
             <div class="about-us__content">
-                <div class="about-us__logo"><svg>
-                        <use xlink:href="/svg/sprite.svg#icon-pencil2"></use>
-                    </svg></div>
+                <div class="about-us__logo"><img src="/SVG/pencil2.svg" alt="pencil-icon"></div>
                 <div class="about-us__heading">
                     <h3 class="heading-quaternary">Desing</h3>
                 </div>
@@ -91,9 +86,7 @@
             </div>
 
             <div class="about-us__content">
-                <div class="about-us__logo"><svg>
-                        <use xlink:href="/svg/sprite.svg#icon-power"></use>
-                    </svg></div>
+                <div class="about-us__logo"><img src="/SVG/power.svg" alt="power-icon"></div>
                 <div class="about-us__heading">
                     <h3 class="heading-quaternary">Ładowanie</h3>
                 </div>
@@ -104,9 +97,9 @@
             </div>
 
             <div class="about-us__content">
-                <div class="about-us__logo"><svg>
-                        <use xlink:href="/svg/sprite.svg#icon-coin-euro"></use>
-                    </svg></div>
+                <div class="about-us__logo">
+                    <img src="/SVG/coin-euro.svg" alt="euro-coin-icon">
+                </div>
                 <div class="about-us__heading">
                     <h3 class="heading-quaternary">Oszczędność</h3>
                 </div>
@@ -116,9 +109,7 @@
             </div>
 
             <div class="about-us__content">
-                <div class="about-us__logo"><svg>
-                        <use xlink:href="/svg/sprite.svg#icon-credit-card"></use>
-                    </svg></div>
+                <div class="about-us__logo"><img src="/SVG/credit-card.svg" alt="credit-card-icon"></div>
                 <div class="about-us__heading">
                     <h3 class="heading-quaternary">Finansowanie</h3>
                 </div>
@@ -142,7 +133,7 @@
                         <li><span>70KM</span>mocy silnika</li>
                         <li><span>2</span> osobowe</li>
                     </ul>
-                    <button class="btn btn--white models__btn">Zarezerwuj jazdę próbną</button>
+                    <button class="modal-signin__btn btn btn--white models__btn">Zarezerwuj jazdę próbną</button>
                 </div>
 
 
@@ -163,7 +154,7 @@
                         <li><span>160KM</span>mocy silnika</li>
                         <li><span>5</span> osobowe</li>
                     </ul>
-                    <button class="btn btn--white models__btn">Zarezerwuj jazdę próbną</button>
+                    <button class="btn btn--white models__btn modal-signin__btn">Zarezerwuj jazdę próbną</button>
                 </div>
 
                 <div class="models__info models__info--3">
@@ -176,7 +167,7 @@
                         <li><span>210KM</span>mocy silnika</li>
                         <li><span>7</span> osobowe</li>
                     </ul>
-                    <button class="btn btn--white models__btn">Zarezerwuj jazdę próbną</button>
+                    <button class="btn btn--white models__btn modal-signin__btn">Zarezerwuj jazdę próbną</button>
                 </div>
                 <div class="models__photos"><img src="./img/nostromo1.jpg" alt="Nostromo car"
                         class="models__img models__img--3"></div>
@@ -204,26 +195,20 @@
 
                     <div class="shops__info">
                         <div class="shops__adress">
-                            <svg>
-                                <use xlink:href="/svg/sprite.svg#icon-location"></use>
-                            </svg>
+                            <img src="/SVG/location.svg" alt="location-icon" class="shops__icon">
                             <p>Poznań, ul. Poznańska 32</p>
                         </div>
 
                         <div class="shops__host">
-                            <svg>
-                                <use xlink:href="/svg/sprite.svg#icon-user"></use>
-                            </svg>
+                            <img src="/SVG/user.svg" alt="user-icon" class="shops__icon">
                             <p>Opiekun salonu - Tomasz Słodowy</p>
                         </div>
 
                         <div class="shops__phone">
-                            <svg>
-                                <use xlink:href="/svg/sprite.svg#icon-phone"></use>
-                            </svg>
+                            <img src="/SVG/phone.svg" alt="phone-icon" class="shops__icon">
                             <p>535 535 535</p>
                         </div>
-                        <button class="shops__btn btn">Umów się na jazdę próbną</button>
+                        <button class="shops__btn btn modal-signin__btn">Umów się na jazdę próbną</button>
                     </div>
 
                 </div>
@@ -232,26 +217,20 @@
 
                     <div class="shops__info">
                         <div class="shops__adress">
-                            <svg>
-                                <use xlink:href="/svg/sprite.svg#icon-location"></use>
-                            </svg>
+                            <img src="/SVG/location.svg" alt="location-icon" class="shops__icon">
                             <p>Warszawa, ul. Puławska 1</p>
                         </div>
 
                         <div class="shops__host">
-                            <svg>
-                                <use xlink:href="/svg/sprite.svg#icon-user"></use>
-                            </svg>
+                            <img src="/SVG/user.svg" alt="user-icon" class="shops__icon">
                             <p>Opiekun salonu - Adam Plich</p>
                         </div>
 
                         <div class="shops__phone">
-                            <svg>
-                                <use xlink:href="/svg/sprite.svg#icon-phone"></use>
-                            </svg>
+                            <img src="/SVG/phone.svg" alt="phone-icon" class="shops__icon">
                             <p>610 610 610</p>
                         </div>
-                        <button class="shops__btn btn">Umów się na jazdę próbną</button>
+                        <button class="shops__btn btn modal-signin__btn">Umów się na jazdę próbną</button>
                     </div>
 
                 </div>
@@ -260,26 +239,20 @@
 
                     <div class="shops__info">
                         <div class="shops__adress">
-                            <svg>
-                                <use xlink:href="/svg/sprite.svg#icon-location"></use>
-                            </svg>
+                            <img src="/SVG/location.svg" alt="location-icon" class="shops__icon">
                             <p>Kraków, ul. Mariacka 88</p>
                         </div>
 
                         <div class="shops__host">
-                            <svg>
-                                <use xlink:href="/svg/sprite.svg#icon-user"></use>
-                            </svg>
+                            <img src="/SVG/user.svg" alt="user-icon" class="shops__icon">
                             <p>Opiekun salonu - Karol Wójcik</p>
                         </div>
 
                         <div class="shops__phone">
-                            <svg>
-                                <use xlink:href="/svg/sprite.svg#icon-phone"></use>
-                            </svg>
+                            <img src="/SVG/phone.svg" alt="phone-icon" class="shops__icon">
                             <p>751 751 751</p>
                         </div>
-                        <button class="shops__btn btn">Umów się na jazdę próbną</button>
+                        <button class="shops__btn btn modal-signin__btn">Umów się na jazdę próbną</button>
                     </div>
 
                 </div>
@@ -290,15 +263,12 @@
                 <div class="footer__logo">
                     <p class="footer__heading footer__heading--logo">PIRX</p>
                     <ul class="footer__logo-media">
-                        <li><a href="#"><svg>
-                                    <use xlink:href="/svg/sprite.svg#icon-facebook"></use>
-                                </svg></a></li>
-                        <li><a href="#"><svg>
-                                    <use xlink:href="/svg/sprite.svg#icon-instagram"></use>
-                                </svg></a></li>
-                        <li><a href="#"><svg>
-                                    <use xlink:href="/svg/sprite.svg#icon-twitter"></use>
-                                </svg></a></li>
+                        <li><a href="#">
+                                <img src="/SVG/facebook.svg" alt="facebook-icon" class="footer__icon">
+                            </a></li>
+                        <li><a href="#"><img src="/SVG/instagram.svg" alt="instagram-icon" class="footer__icon"></a>
+                        </li>
+                        <li><a href="#"><img src="/SVG/twitter.svg" alt="twitter-icon" class="footer__icon"></a></li>
 
                     </ul>
 
@@ -331,10 +301,64 @@
                     </ul>
                 </div>
             </div>
-
         </footer>
 
+        <div class="modal__shadow">
+            <div class="modal">
+                <h3 class="modal__heading">Rezerwacja jazdy próbnej</h3>
+                <label for="modal__name" class="modal__label">Imię</label>
+                <input type="text" name="modal__name" class="modal__input modal__input-name">
+                <label for="modal__surname" class="modal__label">Nazwisko</label>
+                <input type="text" name="modal__surname" class="modal__input modal__input-surname">
+                <label for="modal__phone" class="modal__label">Numer telefonu</label>
+                <input type="number" name="modal__phone" class="modal__input modal__input-phone">
+                <label for="modal__mail" class="modal__label">Adres e-mail</label>
+                <input type="text" name="modal__mail" class="modal__input modal__input-mail">
+                <label for="shop" class="modal__label">Salon</label>
+                <select name="shop" class="modal__select modal__select-shop">
+                    <option value="0" disabled selected>Wybierz salon</option>
+                    <option value="poznan">Poznań</option>
+                    <option value="warsaw">Warszawa</option>
+                    <option value="krakow">Kraków</option>
+                </select>
+                <label for="model" class="modal__label">Model</label>
+                <select name="model" class="modal__select modal__select-car">
+                    <option value="0" disabled selected>Wybierz model auta</option>
+                    <option value="lena">Lena</option>
+                    <option value="anna">Anna</option>
+                    <option value="nostromo">Nostromo</option>
+                </select>
+                <div class="modal-date__container">
+                    <label for="date" class="modal__label modal-date__label">Data</label>
+                    <select name="date" class="modal__select modal-date__select modal__select-date">
+                        <option value="0" disabled selected>-</option>
+                        <option value="monday">Poniedziałek</option>
+                        <option value="tuesday">Wtorek</option>
+                        <option value="wednesday">Środa</option>
+                        <option value="thursday">Czwartek</option>
+                        <option value="friday">Piątek</option>
+                    </select>
+                    <label for="hour" class="modal__label modal-date__label modal-hour__label">Godzina</label>
+                    <select name="hour" class="modal__select modal-date__select modal__select-hour ">
+                        <option value="0" disabled selected>-</option>
+                        <option value="hour1">09:00 - 10:00</option>
+                        <option value="hour2">10:30 - 11:30</option>
+                        <option value="hour3">12:00 - 13:00</option>
+                        <option value="hour4">13:30 - 14:30</option>
+                        <option value="hour5">15:00 - 16:00</option>
+                        <option value="hour6">16:30 - 17:30</option>
+                    </select>
+                </div>
+                <p class="modal__error">Formularz wysłany poprawnie</p>
+                <div class="modal-button__container">
+                    <button class="modal__send modal__btn">Wyślij</button>
+                    <button class="modal__close modal__btn">Anuluj</button>
+                </div>
+            </div>
+
+        </div>
     </div>
+
     <script src="./js/main.js"></script>
 
 </body>
