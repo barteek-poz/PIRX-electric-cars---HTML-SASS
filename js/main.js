@@ -12,14 +12,7 @@ const models = document.querySelector('.models');
 const modalOpenBtn = document.querySelectorAll('.modal-signin__btn');
 const modal = document.querySelector('.modal__shadow');
 const modalInputs = document.querySelectorAll('.modal__input');
-const modalInputName = document.querySelector('.modal__input-name');
-const modalInputSurame = document.querySelector('.modal__input-surname');
-const modalInputPhone = document.querySelector('.modal__input-phone');
-const modalInputMail = document.querySelector('.modal__input-mail');
-const modalSelectCar = document.querySelector('.modal__select-car');
-const modalSelectShop = document.querySelector('.modal__select-shop');
-const modalSelectDate = document.querySelector('.modal__select-date');
-const modalSelectHour = document.querySelector('.modal__select-hour');
+const modalSelects = document.querySelectorAll('.modal__select');
 const modalError = document.querySelector('.modal__error');
 const modalSendBtn = document.querySelector('.modal__send');
 const modalCloseBtn = document.querySelector('.modal__close');
@@ -75,37 +68,43 @@ const modalOn = () => {
 	modal.style.display = 'flex';
 };
 
-const modalSend = () => {
-	if (
-		modalInputName.value === '' ||
-		modalInputSurame.value === '' ||
-		modalInputPhone.value === '' ||
-		modalInputMail.value === '' ||
-		modalSelectCar.value === '0' ||
-		modalSelectShop.value === '0' ||
-		modalSelectHour.value === '0' ||
-		modalSelectDate.value === '0'
-	) {
+const modalClose = () => {
+	modal.style.display = 'none';
+	modalError.style.visibility = 'hidden';
+	modalInputs.forEach((input) => (input.value = ''));
+	modalSelects.forEach((select) => (select.value = '0'));
+};
+
+const modalSubmit = () => {
+	if (inputCheck() === '0' || selectCheck() === '0') {
 		modalError.textContent = 'Wypełnij wszystkie pola';
 		modalError.style.color = 'red';
 		modalError.style.visibility = 'visible';
 	} else {
+		modalError.textContent = 'Formularz został przesłany';
 		modalError.style.color = 'forestgreen';
 		modalError.style.visibility = 'visible';
 	}
 };
 
-const modalClose = () => {
-	modal.style.display = 'none';
-	modalInputName.value = '';
-	modalInputSurame.value = '';
-	modalInputPhone.value = '';
-	modalInputMail.value = '';
-	modalSelectCar.value = '0';
-	modalSelectShop.value = '0';
-	modalSelectHour.value = '0';
-	modalSelectDate.value = '0';
-	modalError.style.visibility = 'hidden';
+const inputCheck = () => {
+	let inputCheckValue;
+	modalInputs.forEach((input) => {
+		if (input.value === '') {
+			inputCheckValue = '0';
+		}
+	});
+	return inputCheckValue;
+};
+
+const selectCheck = () => {
+	let selectCheckValue;
+	modalSelects.forEach((select) => {
+		if (select.value === '0') {
+			selectCheckValue = '0';
+		}
+	});
+	return selectCheckValue;
 };
 
 menuBtn.addEventListener('click', function () {
@@ -117,5 +116,5 @@ modalOpenBtn.forEach((btn) => {
 	btn.addEventListener('click', modalOn);
 });
 
-modalSendBtn.addEventListener('click', modalSend);
+modalSendBtn.addEventListener('click', modalSubmit);
 modalCloseBtn.addEventListener('click', modalClose);
